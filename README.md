@@ -9,6 +9,9 @@
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PeMagro&layout=compact&langs_count=7&theme=dracula"/>
 </div>
   
+  <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="pedro-victor-de-oliveira-magro-997a4a206" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/pedro-victor-de-oliveira-magro-997a4a206?trk=profile-badge">Pedro Victor de Oliveira Magro</a></div>
+              
+  
 <div style="display: inline_block"><br>
   <img align="center" alt="Pedro-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="Pedro-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
