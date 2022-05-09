@@ -1,7 +1,4 @@
-### Oii, eu sou o Pedro, mas pode me chamar de Pedrinho! 👋👋
-
-- 🔭 Atualmente estudando programação em Full-Stack
-- 📫 Contate-me através do email: pvomagro@gmail.com
+### Oii, eu sou o Pedro, estudante de programação! 👋👋
 
 <div align="center">
   <a href="https://github.com/PeMagro">
