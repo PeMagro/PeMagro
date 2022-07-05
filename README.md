@@ -1,4 +1,4 @@
-### Olá, eu sou o Pedro, estudante de programação!! 💻
+### Olá, eu sou o Pedro, estudante de programação!! 💻👋
 
 <div align="center">
   <a href="https://github.com/PeMagro">
