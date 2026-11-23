@@ -1,4 +1,4 @@
-"""Gera assets/commits.svg: um card no estilo Claude com o total de commits.
+"""Gera assets/commits-dark.svg e commits-light.svg: um card no estilo Claude com o total de commits.
 
 Uso:
   GH_LOGIN=PeMagro GH_TOKEN=... python3 .github/scripts/commits_card.py
@@ -11,12 +11,16 @@ import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[2] / "assets" / "commits.svg"
+ASSETS = Path(__file__).resolve().parents[2] / "assets"
 API = "https://api.github.com/graphql"
 
-# Paleta inspirada no Claude
-IVORY, BORDER, INK, MUTED, CLAY = "#FAF9F5", "#E8E6DC", "#141413", "#87867F", "#D97757"
-LEVELS = ["#EDEAE0", "#F5D3C2", "#EDAA8C", "#D97757", "#A8462A"]
+# Paletas inspiradas no Claude: (fundo, borda, texto, texto suave, terracota, pílula, níveis do mapa)
+THEMES = {
+    "light": ("#FAF9F5", "#E8E6DC", "#141413", "#87867F", "#D97757", "#F0EEE6",
+              ["#EDEAE0", "#F5D3C2", "#EDAA8C", "#D97757", "#A8462A"]),
+    "dark": ("#1F1E1D", "#3D3D3A", "#FAF9F5", "#A6A39A", "#D97757", "#2A2927",
+             ["#33322F", "#5A3A2C", "#8C4A31", "#C2603F", "#E8845F"]),
+}
 
 
 def gql(token, query, variables):
@@ -102,7 +106,8 @@ def spark(cx, cy, r, color):
             f'{rays}</g></g>')
 
 
-def render(s):
+def render(s, theme):
+    IVORY, BORDER, INK, MUTED, CLAY, PILL, LEVELS = THEMES[theme]
     ph = s is None
     total = "…" if ph else fmt(s["total"])
     since = "" if ph else f', desde {s["since"]}'
@@ -128,7 +133,7 @@ def render(s):
     for label, value in stats:
         w = 188
         pills.append(
-            f'<rect x="{x}" y="224" width="{w}" height="50" rx="12" fill="#F0EEE6" stroke="{BORDER}"/>'
+            f'<rect x="{x}" y="224" width="{w}" height="50" rx="12" fill="{PILL}" stroke="{BORDER}"/>'
             f'<text x="{x + 16}" y="244" font-size="12" fill="{MUTED}">{label}</text>'
             f'<text x="{x + 16}" y="264" font-size="16" font-weight="700" fill="{INK}">{value}</text>')
         x += w + 12
@@ -179,9 +184,10 @@ def main():
     else:
         login, token = os.environ["GH_LOGIN"], os.environ["GH_TOKEN"]
         stats = fetch(login, token)
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(render(stats), encoding="utf-8")
-    print(f"ok: {OUT}" + ("" if stats is None else f" total={stats['total']}"))
+    ASSETS.mkdir(parents=True, exist_ok=True)
+    for theme in THEMES:
+        (ASSETS / f"commits-{theme}.svg").write_text(render(stats, theme), encoding="utf-8")
+    print("ok" + ("" if stats is None else f" total={stats['total']}"))
 
 
 if __name__ == "__main__":

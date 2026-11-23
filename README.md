@@ -18,7 +18,11 @@
 
 ## 📈 Meus commits
 
-<img src="./assets/commits.svg" alt="Total de commits de PeMagro" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/commits-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/commits-dark.svg">
+  <img src="./assets/commits-dark.svg" alt="Total de commits de PeMagro" width="100%">
+</picture>
 
 ## 🛠️ Stack
 
