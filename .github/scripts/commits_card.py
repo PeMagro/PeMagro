@@ -85,6 +85,10 @@ def fetch(login, token):
     }
 
 
+def dias(n):
+    return f"{n} dia" if n == 1 else f"{n} dias"
+
+
 def fmt(n):
     return f"{n:,}".replace(",", ".")
 
@@ -104,8 +108,8 @@ def render(s):
     since = "" if ph else f', desde {s["since"]}'
     stats = [
         ("últimos 12 meses", "…" if ph else fmt(s["year"])),
-        ("sequência atual", "…" if ph else f'{s["streak"]} dias'),
-        ("maior sequência", "…" if ph else f'{s["best"]} dias'),
+        ("sequência atual", "…" if ph else dias(s["streak"])),
+        ("maior sequência", "…" if ph else dias(s["best"])),
     ]
     weeks = [[0] * 7] * 26 if ph else s["weeks"]
     peak = max([c for w in weeks for c in w] + [1])
