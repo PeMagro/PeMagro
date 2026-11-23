@@ -42,7 +42,7 @@ Com o **OIC** é possível:
 
 ## 🤝 Time do Claude Code
 
-Faço parte do **Time do Claude Code**: eu defino o problema e as regras de negócio, e a IA acelera a construção. Assim, ideias viram produtos em dias, não em meses.
+Eu defino o problema e as regras de negócio, e a IA acelera a construção. Assim, ideias viram produtos em dias, não em meses.
 
 ## 📫 Vamos conversar?
 
