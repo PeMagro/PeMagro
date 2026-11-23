@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <clipPath id="r"><rect x="1" y="1" width="1198" height="238" rx="20"/></clipPath>
+    <linearGradient id="hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#164E63"/>
+      <stop offset=".5" stop-color="#3B0764"/>
+      <stop offset="1" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="1200" height="240" fill="#0F172A"/>
+    <rect width="1200" height="56" fill="url(#hd)" fill-opacity=".85"/>
+    <rect y="116" width="1200" height="62" fill="#FFFFFF" fill-opacity=".025"/>
+  </g>
+  <g stroke="#334155">
+    <line x1="400" y1="0" x2="400" y2="240"/>
+    <line x1="800" y1="0" x2="800" y2="240"/>
+    <line x1="0" y1="56" x2="1200" y2="56"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="238" rx="20" fill="none" stroke="#475569" stroke-width="2"/>
+
+  <g font-size="17" font-weight="700" fill="#F8FAFC" text-anchor="middle">
+    <circle cx="140" cy="28" r="5" fill="#22D3EE"/><text x="210" y="34">Dados &amp; BI</text>
+    <circle cx="545" cy="28" r="5" fill="#C084FC"/><text x="608" y="34">Integração</text>
+    <circle cx="950" cy="28" r="5" fill="#FBBF24"/><text x="1008" y="34">Dev &amp; IA</text>
+  </g>
+
+  <g font-size="15" font-weight="600" text-anchor="middle">
+    <g fill="#22D3EE" fill-opacity=".14" stroke="#22D3EE" stroke-opacity=".45">
+      <rect x="160" y="69" width="80" height="34" rx="17"/>
+      <rect x="120" y="129" width="160" height="34" rx="17"/>
+      <rect x="132" y="189" width="136" height="34" rx="17"/>
+    </g>
+    <g fill="#67E8F9">
+      <text x="200" y="91">SQL</text><text x="200" y="151">Oracle Database</text><text x="200" y="211">BI Publisher</text>
+    </g>
+    <g fill="#C084FC" fill-opacity=".14" stroke="#C084FC" stroke-opacity=".45">
+      <rect x="482" y="69" width="236" height="34" rx="17"/>
+      <rect x="544" y="129" width="112" height="34" rx="17"/>
+      <rect x="550" y="189" width="100" height="34" rx="17"/>
+    </g>
+    <g fill="#D8B4FE">
+      <text x="600" y="91">Oracle Integration Cloud</text><text x="600" y="151">REST APIs</text><text x="600" y="211">Postman</text>
+    </g>
+    <g fill="#FBBF24" fill-opacity=".14" stroke="#FBBF24" stroke-opacity=".45">
+      <rect x="936" y="69" width="128" height="34" rx="17"/>
+      <rect x="946" y="129" width="108" height="34" rx="17"/>
+      <rect x="954" y="189" width="92" height="34" rx="17"/>
+    </g>
+    <g fill="#FCD34D">
+      <text x="1000" y="91">Claude Code</text><text x="1000" y="151">Supabase</text><text x="1000" y="211">Vercel</text>
+    </g>
+  </g>
+</svg>
